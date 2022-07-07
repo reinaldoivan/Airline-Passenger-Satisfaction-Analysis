@@ -73,16 +73,16 @@ Setiap baris dari dataset mewakili data penerbangan seorang pelanggan serta kepu
 | Arrival Delay in Minutes | Float | Minutes delayed when Arrival |
 | satisfaction | Int | Airline satisfaction level(Satisfied, neutral or dissatisfied) |
 
-![](https://github.com/PurwadhikaDev/ZetaSquad_JC_DS_LS_01_FinalProject/blob/main/Images/Data%20Condition.PNG)
+![](https://github.com/reinaldoivan/Airline-Passenger-Satisfaction-Analysis/blob/main/Images/Data%20Condition.PNG)
 
 <br />
 
 Data Analysis
 -------------
-![](https://github.com/PurwadhikaDev/ZetaSquad_JC_DS_LS_01_FinalProject/blob/main/Images/Satisfaction%20by%20Class.PNG)
-![](https://github.com/PurwadhikaDev/ZetaSquad_JC_DS_LS_01_FinalProject/blob/main/Images/Class%20by%20Flight%20Distance.PNG)
-![](https://github.com/PurwadhikaDev/ZetaSquad_JC_DS_LS_01_FinalProject/blob/main/Images/Customer%20Type%20by%20Age%20Group.PNG)
-![](https://github.com/PurwadhikaDev/ZetaSquad_JC_DS_LS_01_FinalProject/blob/main/Images/Class%20by%20Type%20of%20Travel.PNG)
+![](https://github.com/reinaldoivan/Airline-Passenger-Satisfaction-Analysis/blob/main/Images/Satisfaction%20by%20Class.PNG)
+![](https://github.com/reinaldoivan/Airline-Passenger-Satisfaction-Analysis/blob/main/Images/Class%20by%20Flight%20Distance.PNG)
+![](https://github.com/reinaldoivan/Airline-Passenger-Satisfaction-Analysis/blob/main/Images/Customer%20Type%20by%20Age%20Group.PNG)
+![](https://github.com/reinaldoivan/Airline-Passenger-Satisfaction-Analysis/blob/main/Images/Class%20by%20Type%20of%20Travel.PNG)
 
 **Analysis :**
 
@@ -105,17 +105,17 @@ Modelling & Evaluation
 ----------------------
 Setelah melakukan cross validation, model yang terbaik digunakan adalah `CatBoost` dengan f1-score 0.956894 sebelum di tuning, dan 0.957916 setelah di tuning. Kedua score didapat dari training set, dan mengalami perubahan di test set dimana XGBoost default memiliki f1-score lebih tinggi, comparison dapat dilihat di gambar berikut:
 
-![](https://github.com/PurwadhikaDev/ZetaSquad_JC_DS_LS_01_FinalProject/blob/main/Images/Score%20Comparison.PNG)
+![](https://github.com/reinaldoivan/Airline-Passenger-Satisfaction-Analysis/blob/main/Images/Score%20Comparison.PNG)
 
 **Feature Importances :**
 
-![](https://github.com/PurwadhikaDev/ZetaSquad_JC_DS_LS_01_FinalProject/blob/main/Images/Feature%20Importances.PNG)
+![](https://github.com/reinaldoivan/Airline-Passenger-Satisfaction-Analysis/blob/main/Images/Feature%20Importances.PNG)
 
 Terlihat bahwa ternyata untuk model CatBoost kita, feature/kolom `inflight wifi service` adalah yang paling penting, kemudian diikuti dengan `Type of Travel`, `Customer Type`, dan selanjutnya. Grafik ini akan kita gunakan sebagai acuan dalam memberikan rekomendasi di section berikutnya.
 
 **SHAP Values :**
 
-![](https://github.com/PurwadhikaDev/ZetaSquad_JC_DS_LS_01_FinalProject/blob/main/Images/SHAP.PNG)
+![](https://github.com/reinaldoivan/Airline-Passenger-Satisfaction-Analysis/blob/main/Images/SHAP.PNG)
 
 Berdasarkan **SHAP Values**, kita dapat melihat:
 1. `Class`: Kelas Business berpengaruh secara positif terhadap target.
@@ -130,7 +130,7 @@ Conclusion & Recommendation
 ---------------------------
 **Confusion Matrix :**
 
-![](https://github.com/PurwadhikaDev/ZetaSquad_JC_DS_LS_01_FinalProject/blob/main/Images/Confusion%20Matrix.PNG)
+![](https://github.com/reinaldoivan/Airline-Passenger-Satisfaction-Analysis/blob/main/Images/Confusion%20Matrix.PNG)
 
 Informasi general seputar tiket:
 - Rata-rata tiket per orang = 116 USD (tidak dipisah oleh `class`)
@@ -147,7 +147,7 @@ Summary:
 
 **Conclusion :**
 
-![](https://github.com/PurwadhikaDev/ZetaSquad_JC_DS_LS_01_FinalProject/blob/main/Images/Classification%20Report%20CatBoost.PNG)
+![](https://github.com/reinaldoivan/Airline-Passenger-Satisfaction-Analysis/blob/main/Images/Classification%20Report%20CatBoost.PNG)
 
 Hal-hal yang dapat dikonklusikan berdasarkan hasil classification report:
 - Berdasarkan `Recall`, terdapat 98% pelanggan yang perlu diberikan insentif dan seharusnya tidak puas, dan terdapat 94% pelanggan yang tidak perlu diberikan insentif dan seharusnya puas.
